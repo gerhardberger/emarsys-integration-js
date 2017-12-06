@@ -238,6 +238,48 @@ describe('Navigate Handler', function() {
     ].join('&'));
   });
 
+  it('navigates to program edit page with proper params', function() {
+    messageHandler.handleMessage({
+      event: 'navigate',
+      data: {
+        target: 'program/edit',
+        params: {
+          program_id: 318
+        }
+      },
+      source: {
+        integration_instance_id: 1
+      }
+    });
+
+    expect(fakeWindow.location.href).to.eql([
+      'bootstrap.php?session_id=SESSIONID',
+      'r=program/edit',
+      'programId=318'
+    ].join('&'));
+  });
+
+  it('navigates to program report page with proper params', function() {
+    messageHandler.handleMessage({
+      event: 'navigate',
+      data: {
+        target: 'program/report',
+        params: {
+          program_id: 318
+        }
+      },
+      source: {
+        integration_instance_id: 1
+      }
+    });
+
+    expect(fakeWindow.location.href).to.eql([
+      'bootstrap.php?session_id=SESSIONID',
+      'r=program/report',
+      'programId=318'
+    ].join('&'));
+  });
+
   it('navigates to contact edit page with proper params', function() {
     messageHandler.handleMessage({
       event: 'navigate',

@@ -124,6 +124,18 @@ class MessageHandlerNavigate extends AbstractMessageHandler {
         'r=program/create'
       ].join('&'),
 
+      'program/edit': [
+        'bootstrap.php?session_id={session_id}',
+        'r=program/edit',
+        'programId={program_id}'
+      ].join('&'),
+
+      'program/report': [
+        'bootstrap.php?session_id={session_id}',
+        'r=program/report',
+        'programId={program_id}'
+      ].join('&'),
+
       'trendsreporting/trends': [
         'bootstrap.php?session_id={session_id}',
         'r=trendsreporting/trends'
