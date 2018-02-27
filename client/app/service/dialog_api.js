@@ -68,7 +68,7 @@ class DialogApi {
   confirmNavigation(url, message) {
     let confirmPromise = this.confirm(message);
 
-    confirmPromise.then(() => {
+    confirmPromise.done(() => {
       this.global.$(this.global).off('beforeunload');
       this.global.location.href = url;
     }).fail(() => {
