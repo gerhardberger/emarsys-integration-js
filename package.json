@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "emarsys-integration-client": "1.6.2"
+    "emarsys-integration-client": "1.11.0"
   },
   "devDependencies": {
     "babel-core": "6.8.0",
